@@ -1,0 +1,28 @@
+@import "./styles/Header.scss";
+@import "./styles/Hero.scss";
+@import "./styles/AboutMe.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000;
+  font-family: "IBM Plex Mono", monospace;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+#particles canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

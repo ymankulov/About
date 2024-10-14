@@ -1,0 +1,31 @@
+#header {
+  padding: 25px 0;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      color: white;
+    }
+    &--nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      a {
+        color: white;
+        font-weight: 300;
+        font-size: 18px;
+        transition: 0.5s;
+        padding-bottom: 2px;
+        border-bottom: 2px solid transparent;
+        &:hover {
+          border-bottom: 2px solid #d6ef0e;
+        }
+      }
+    }
+  }
+}
