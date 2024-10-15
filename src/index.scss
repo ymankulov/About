@@ -1,6 +1,8 @@
 @import "./styles/Header.scss";
 @import "./styles/Hero.scss";
 @import "./styles/AboutMe.scss";
+@import "./styles/Footer.scss";
+@import "./styles/Contact.scss";
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +11,18 @@ body {
   background: #000;
   font-family: "IBM Plex Mono", monospace;
 }
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 3px solid #d6ef0e;
 }
 .container {
   width: 70%;

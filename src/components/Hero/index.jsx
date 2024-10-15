@@ -22,9 +22,9 @@ const Hero = () => {
                 "Let's code the future, step by step!",
                 1000,
               ]}
-              wrapper="span"
+              wrapper="h2"
               speed={50}
-              style={{ fontSize: "2em", display: "inline-block" }}
+              style={{ display: "inline-block" }}
               repeat={Infinity}
             />
             <p>
