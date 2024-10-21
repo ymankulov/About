@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+// import Confetti from "react-confetti";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +11,12 @@ const Contact = () => {
     message: "",
   });
   const [errors, setErrors] = useState({ name: "", email: "", message: "" });
+  // const [showConfetti, setShowConfetti] = useState(false);
+
+  // const handleButtonClick = () => {
+  //   setShowConfetti(true);
+  //   setTimeout(() => setShowConfetti(false), 5000); // Конфетти исчезнет через 5 секунд
+  // };
 
   const validate = () => {
     let valid = true;
