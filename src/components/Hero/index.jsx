@@ -33,9 +33,6 @@ const Hero = () => {
               sphere. <br /> By the way, I am from <span>Kyrgyzstan!</span>
             </p>
           </div>
-          {/* <div className="hero--img">
-            <img src={meImg} alt="img" />
-          </div> */}
         </div>
         <div className="links">
           <a href="https://github.com/ymankulov" target="_blank">
@@ -44,7 +41,7 @@ const Hero = () => {
           <a href="https://www.instagram.com/ymankulov_" target="_blank">
             <IoLogoInstagram />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://www.linkedin.com/in/taladev/" target="_blank">
             <SlSocialLinkedin />
           </a>
           <div className="links--line"></div>

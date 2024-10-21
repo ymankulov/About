@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -32,7 +33,7 @@ const Contact = () => {
       valid = false;
     }
     if (!formData.message) {
-      newErrors.message = "Name is required";
+      newErrors.message = "Message is required";
       valid = false;
     } else if (formData.message.length < 4) {
       newErrors.message = "Message must be at least 4 characters";
@@ -93,64 +94,66 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact">
-      <div className="container">
-        <div className="contact">
-          <h1>
-            Contact Us <span>☏</span>
-          </h1>
-          <p>
-            If you have any proposals for cooperation, <br />I will be glad to
-            consider them! You can write to me, <br /> and I will try to answer
-            as soon as possible. You can also ask <br /> any questions - I am
-            always open to discussion.
-          </p>
-          <div className="contact--form">
-            <div className="contact--form__item">
-              <h5>Full Name</h5>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter your full name..."
-                onChange={handleChange}
-                value={formData.name}
-              />
-              {errors.name && (
-                <span style={{ color: "red" }}>{errors.name}</span>
-              )}
+    <>
+      <div id="contact">
+        <div className="container">
+          <div className="contact">
+            <h1>
+              Contact Us <span>☏</span>
+            </h1>
+            <p>
+              If you have any proposals for cooperation, <br />I will be glad to
+              consider them! You can write to me, <br /> and I will try to
+              answer as soon as possible. You can also ask <br /> any questions
+              - I am always open to discussion.
+            </p>
+            <div className="contact--form">
+              <div className="contact--form__item">
+                <h5>Full Name</h5>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your full name..."
+                  onChange={handleChange}
+                  value={formData.name}
+                />
+                {errors.name && (
+                  <span style={{ color: "red" }}>{errors.name}</span>
+                )}
+              </div>
+              <div className="contact--form__item">
+                <h5>Email Address</h5>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email address..."
+                  onChange={handleChange}
+                  value={formData.email}
+                />
+                {errors.email && (
+                  <span style={{ color: "red" }}>{errors.email}</span>
+                )}
+              </div>
+              <div className="contact--form__item">
+                <h5>Message</h5>
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="3"
+                  placeholder="Message..."
+                  onChange={handleChange}
+                  value={formData.message}
+                ></textarea>
+                <span style={{ color: "red" }}>{errors.message}</span>
+              </div>
+              <button onClick={() => handleSubmit()}>Submit</button>
             </div>
-            <div className="contact--form__item">
-              <h5>Email Address</h5>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email address..."
-                onChange={handleChange}
-                value={formData.email}
-              />
-              {errors.email && (
-                <span style={{ color: "red" }}>{errors.email}</span>
-              )}
-            </div>
-            <div className="contact--form__item">
-              <h5>Message</h5>
-              <textarea
-                name="message"
-                id=""
-                cols="30"
-                rows="3"
-                placeholder="Message..."
-                onChange={handleChange}
-                value={formData.message}
-              ></textarea>
-              <span style={{ color: "red" }}>{errors.message}</span>
-            </div>
-            <button onClick={() => handleSubmit()}>Submit</button>
           </div>
         </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
-    </div>
+    </>
   );
 };
 
